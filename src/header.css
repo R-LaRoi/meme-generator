@@ -1,0 +1,21 @@
+
+.header{
+  height: 40px;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 20px;
+  background: rgb(209, 96, 0);
+    background: linear-gradient(74deg, rgba(209, 96, 0, 1) 0%, rgba(251, 153, 80, 1) 100%, rgba(252, 252, 252, 1) 100%);}
+
+    .title{
+      float: left;
+      padding-left: 10px;
+      font-size: 25px;
+    }
+
+    .sub-text{
+      padding-top: 10px;
+      float: right;
+      font-size: 15px;
+    }

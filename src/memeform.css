@@ -28,9 +28,7 @@ border-radius: 10px;
 border-width: .5px;
 }
 
-button:hover{
-
-background-color: azure;
+button:hover{color: rgb(33, 32, 32);
 }
 
 .meme--image{

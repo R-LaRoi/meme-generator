@@ -1,18 +1,24 @@
 import React, { useState } from "react";
 import "./memeform.css";
-import memesData from "./memesData.js";
 
 export default function Memeform() {
+  const [allMemes, setAllMemes] = useState([]);
+  const memeUrl = `https://api.imgflip.com/get_memes`;
+
+  React.useEffect(() => {
+    fetch(memeUrl)
+      .then((response) => response.json())
+      .then((memeData) => setAllMemes(memeData.data.memes));
+  }, [memeUrl]);
+
   const [meme, setMeme] = useState({
     topText: "more",
     bottomText: "chips",
     randomImage: "http://i.imgflip.com/3l60ph.jpg",
   });
 
-  const [allMemeImages] = useState(memesData);
-
   function getImage() {
-    const memesArray = allMemeImages.data.memes;
+    const memesArray = allMemes;
     const randomNumber = Math.floor(Math.random() * memesArray.length);
     const url = memesArray[randomNumber].url;
 
